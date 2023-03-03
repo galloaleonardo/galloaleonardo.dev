@@ -1,7 +1,7 @@
 export default function TextContent() {
     return (
         <>
-            <div className='text-justify text-base'>
+            <div className='text-justify text-base p-5'>
                 <p className="mb-2"><small>Ok, let's talk a little bit about me!</small></p>
                 About {Number(new Date().getFullYear()) - 2016} years ago I started my journey with the good old Delphi/Pascal developing desktop applications for ERP systems.
                 Later, I built robust applications with PHP, Vue.js, SQL Server and realized that web development would be my focus where I would demand time and dedication.
