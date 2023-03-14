@@ -32,7 +32,7 @@ export default function Navbar({ onChangeLanguage }) {
 
     return (
         <>
-            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-300 dark:bg-gray-800 mb-3">
+            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-300 dark:bg-gray-800 mb-3" data-testid="navbar">
                 <div className="container px-4 mx-auto flex-wrap items-center justify-between lg:max-w-6xl">
                     <div className="flex items-center lg:hidden">
                         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -86,7 +86,7 @@ export default function Navbar({ onChangeLanguage }) {
                             </li>
 
                             <li className="nav-item lg:ml-5 hidden lg:contents">
-                                <a onClick={languageSwitch}  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75" href="# ">
+                                <a onClick={languageSwitch} className="lg:px-3 w-12 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75" href="# ">
                                     {languageLabel}
                                 </a>
                             </li>

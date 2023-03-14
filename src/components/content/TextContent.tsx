@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Language } from "../../enums/Language";
 
 export default function TextContent({ language }) {
@@ -33,7 +32,7 @@ export default function TextContent({ language }) {
     
     return (
         <>
-            <div className='text-justify text-base px-7 lg:px-5'>
+            <div className='text-justify text-base px-7 lg:px-5' data-testid='text-content'>
                 {language === Language.EN ? getEnglishText() : getPortugueseText()}
                 
             </div>

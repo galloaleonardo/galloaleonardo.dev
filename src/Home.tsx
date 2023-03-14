@@ -8,13 +8,10 @@ function Home() {
   const [language, setLanguage] = useState<string>(Language.EN)
 
   return (
-    <div className='lg:h-screen bg-gray-200 dark:bg-gray-900'>
-      
-
+    <div className='lg:h-screen bg-gray-200 dark:bg-gray-900' data-testid='home'>
       <Navbar onChangeLanguage={setLanguage}/>
       <DetailCard language={language} />
       <Footer />
-
     </div>
   )
 }

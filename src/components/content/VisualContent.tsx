@@ -1,10 +1,10 @@
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import me from './../../assets/me.jpg'
 
-export default function DetailCard() {
+export default function VisualContent() {
     return (
         <>
-            <div className="lg:pt-16 p-5">
+            <div className="lg:pt-16 p-5" data-testid="visual-content">
                 <div className='mb-5 text-xl lg:text-2xl'>Hello, it's me:</div>
                 <div className='lg:ml-5 relative w-32 lg:w-36 mb-5'>
                     <img className='rounded-full shadow-lg' src={me} alt="Me" />
