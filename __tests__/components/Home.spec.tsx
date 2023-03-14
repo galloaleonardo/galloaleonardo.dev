@@ -5,7 +5,7 @@ import Home from './../../src/Home';
 test('should render itself', () => {
     const { getByTestId } = render(<Home />);
 
-    expect(getByTestId('homes')).toBeInTheDocument();
+    expect(getByTestId('home')).toBeInTheDocument();
 });
 
 test('should render Navbar component', () => {

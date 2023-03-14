@@ -86,13 +86,13 @@ export default function Navbar({ onChangeLanguage }) {
                             </li>
 
                             <li className="nav-item lg:ml-5 hidden lg:contents">
-                                <a onClick={languageSwitch} className="lg:px-3 w-12 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75" href="# ">
+                                <a onClick={languageSwitch} className="lg:px-3 w-12 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75" href="# " data-testid="language-changer">
                                     {languageLabel}
                                 </a>
                             </li>
 
                             <li className="nav-item lg:ml-5 hidden lg:contents">
-                                <a className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="# ">
+                                <a className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="# " data-testid="theme-changer">
                                     <MoonIcon className="h-6 w-6 text-purple-700 hover:text-purple-500" onClick={themeSwitch} />
                                 </a>
                             </li>
