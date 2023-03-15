@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Bars3Icon, EnvelopeIcon, MoonIcon } from '@heroicons/react/24/solid'
 import { Language } from "../../enums/Language";
 
-export default function Navbar({ onChangeLanguage }) {
+interface Props {
+    onChangeLanguage: Dispatch<SetStateAction<string>>
+}
+
+export default function Navbar({ onChangeLanguage }: Props) {
     const [navbarOpen, setNavbarOpen] = useState<boolean>(false)
     const [theme, setTheme] = useState<string>('dark')
     const [language, setLanguage] = useState<string>(Language.EN)
@@ -40,6 +44,7 @@ export default function Navbar({ onChangeLanguage }) {
                                 className="text-dark dark:text-white cursor-pointer text-xl leading-none py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                                 type="button"
                                 onClick={() => setNavbarOpen(!navbarOpen)}
+                                data-testid="menu-mobile"
                             >
                                 <Bars3Icon className="h-6 w-6" />
 
@@ -80,7 +85,7 @@ export default function Navbar({ onChangeLanguage }) {
                             </li>
 
                             <li className="nav-item lg:ml-5 hidden lg:contents">
-                                <div className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75" href="# ">
+                                <div className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-dark dark:text-white hover:opacity-75">
                                     |
                                 </div>
                             </li>
@@ -92,14 +97,15 @@ export default function Navbar({ onChangeLanguage }) {
                             </li>
 
                             <li className="nav-item lg:ml-5 hidden lg:contents">
-                                <a className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="# " data-testid="theme-changer">
-                                    <MoonIcon className="h-6 w-6 text-purple-700 hover:text-purple-500" onClick={themeSwitch} />
+                                <a className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="# ">
+                                    <MoonIcon className="h-6 w-6 text-purple-700 hover:text-purple-500" onClick={themeSwitch} data-testid="theme-changer" />
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            {theme === 'dark' ? <span className="hidden" data-testid="theme-color">dark</span> : <span className="hidden" data-testid="theme-color">light</span>}
         </>
     );
 }

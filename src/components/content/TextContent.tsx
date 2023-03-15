@@ -1,6 +1,10 @@
 import { Language } from "../../enums/Language";
 
-export default function TextContent({ language }) {
+interface Props {
+    language: string
+}
+
+export default function TextContent({ language }: Props) {
     
     const getEnglishText = (): JSX.Element => {
         return (
