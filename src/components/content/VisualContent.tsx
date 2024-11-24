@@ -1,5 +1,6 @@
-import { MapPinIcon } from "@heroicons/react/24/solid";
 import me from './../../assets/me.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapPin } from "@fortawesome/free-solid-svg-icons";
 
 export default function VisualContent() {
     return (
@@ -12,11 +13,11 @@ export default function VisualContent() {
 
                 <div className='lg:ml-5 text-3xl lg:text-5xl'>Leonardo Gallo</div>
                 <div className='flex items-center'>
-                    <div className='lg:ml-5 mt-2 text-xl lg:text-2xl font-thin'>Software Engineer</div>
+                    <div className='lg:ml-5 mt-2 text-xl lg:text-2xl font-thin'>Software Architect</div>
 
                     <div className='flex gap-1 items-center'>
-                        <MapPinIcon className="ml-5 mt-2 h-8 w-8 text-purple-700 hover:text-purple-500" />
-                        <div className='pt-2 font-thin text-lg'>Brazil</div>
+                        <FontAwesomeIcon icon={faMapPin} className="ml-5 mt-2 h-8 w-8 text-purple-700 hover:text-purple-500" />
+                        <div className='pt-2 font-thin text-lg'>Campinas, SP, BR</div>
                     </div>
                 </div>
                 <div className='flex lg:ml-2 gap-2 mt-5 items-center'>
