@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 35% 7%;
+    --foreground: 226 70% 95.9%;
+
+    --card: 229 36% 10%;
+    --card-foreground: 226 70% 95.9%;
+
+    --popover: 229 36% 10%;
+    --popover-foreground: 226 70% 95.9%;
+
+    --primary: 226 70% 55.9%;
+    --primary-foreground: 226 70% 95.9%;
+
+    --secondary: 226 30% 20%;
+    --secondary-foreground: 226 70% 95.9%;
+
+    --muted: 226 30% 15%;
+    --muted-foreground: 226 30% 70%;
+
+    --accent: 246 60% 60%;
+    --accent-foreground: 226 70% 95.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 226 70% 95.9%;
+
+    --border: 226 30% 15%;
+    --input: 226 30% 15%;
+    --ring: 246 60% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-sm border border-white/10 shadow-lg;
+  }
+
+  .skill-badge {
+    @apply py-1 px-3 rounded-full text-sm bg-secondary text-secondary-foreground;
+  }
+
+  .tech-icon {
+    @apply w-10 h-10 flex items-center justify-center rounded-md bg-secondary/50 transition-all hover:bg-accent/20;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent animate-gradient-shift bg-[length:200%_auto];
+  }
+}
